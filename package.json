@@ -35,6 +35,7 @@
     "react": "^16.5.2",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
     "resolve": "1.6.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -56,6 +57,7 @@
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -92,6 +94,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   }
