@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 
 import AnotherFile from './../js/AnotherFile';
+import { sum } from './../js/AnotherFile';
 
 describe('<AnotherFile />', () => {
   it('renders three <Foo /> components', () => {
@@ -21,4 +22,8 @@ describe('<AnotherFile />', () => {
     wrapper.find('button').simulate('click');
     expect(onButtonClick).to.have.property('callCount', 1);
   });
+});
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
 });
