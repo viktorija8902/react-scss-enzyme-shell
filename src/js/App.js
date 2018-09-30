@@ -19,19 +19,22 @@ class App extends Component {
           throw new Error(`${response.status} ${response.statusText}`);
         }
       })
-      .then(data => this.setState({ data: JSON.stringify(data.list) }))
+      .then(data => this.setState({ data: data.list }))
       .catch(error => {
         this.setState({ error: true})
       });
   }
   render() {
+    const results = this.state.data && this.state.data.map(item => {
+      return <div key={item.name}>{item.name}</div>
+    })
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        {this.state.data}
+        {results}
         {this.state.error && <div>Error!!</div>}
         <AnotherFile test={"test test test"}/>
       </div>
