@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './../logo.svg';
-import './../styles/App.css';
+import logo from './../images/logo.svg';
+import './../styles/App.scss';
+import AnotherFile from './AnotherFile.js';
 
 class App extends Component {
   render() {
@@ -10,9 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <AnotherFile test={"test test test"}/>
       </div>
     );
   }
